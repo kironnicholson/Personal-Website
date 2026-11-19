@@ -1,12 +1,11 @@
 :root {
-  --bg: #11151b;
-  --panel: #171d25;
-  --panel-line: #262f3a;
-  --ink: #e7ebee;
-  --ink-dim: #8b95a1;
-  --teal: #4fd1c5;
-  --gold: #d1a857;
-  --closed: #6b7684;
+  --bg: #0d0d0d;
+  --panel: #161616;
+  --panel-line: #2a2a2a;
+  --ink: #f5f5f5;
+  --ink-dim: #a0a0a0;
+  --accent: #ffffff;
+  --closed: #777777;
   --font-mono: 'JetBrains Mono', 'Courier New', monospace;
   --font-serif: 'Source Serif 4', Georgia, serif;
 }
@@ -56,11 +55,11 @@ a { color: inherit; }
   transition: color 0.15s ease;
 }
 
-.nav-link:hover { color: var(--teal); }
-.nav-link:focus-visible { outline: 2px solid var(--teal); outline-offset: 3px; }
+.nav-link:hover { color: var(--accent); }
+.nav-link:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 
-.nav-link-external { color: var(--gold); }
-.nav-link-external:hover { color: var(--teal); }
+.nav-link-external { color: var(--ink); }
+.nav-link-external:hover { color: var(--ink-dim); }
 
 @media (max-width: 860px) {
   .site-nav {
@@ -85,7 +84,7 @@ a { color: inherit; }
 .eyebrow {
   font-family: var(--font-mono);
   font-size: 0.8rem;
-  color: var(--teal);
+  color: var(--ink-dim);
   letter-spacing: 0.03em;
   margin-bottom: 1.2rem;
 }
@@ -103,8 +102,9 @@ a { color: inherit; }
 .role {
   font-family: var(--font-serif);
   font-size: 1.25rem;
-  color: var(--gold);
+  color: var(--ink);
   margin-bottom: 1.4rem;
+  font-weight: 500;
 }
 
 .dot { color: var(--ink-dim); margin: 0 0.4em; }
@@ -131,8 +131,8 @@ a { color: inherit; }
   width: fit-content;
 }
 
-.contact-link:hover { color: var(--teal); }
-.contact-link:focus-visible { outline: 2px solid var(--teal); outline-offset: 3px; }
+.contact-link:hover { color: var(--ink-dim); }
+.contact-link:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 
 .contact-link .label {
   color: var(--ink-dim);
@@ -172,7 +172,7 @@ a { color: inherit; }
 .ledger-row.active { color: var(--ink); }
 
 .entry-no {
-  color: var(--teal);
+  color: var(--accent);
   font-weight: 500;
 }
 
@@ -184,8 +184,8 @@ a { color: inherit; }
   letter-spacing: 0.03em;
 }
 
-.status.closed { background: rgba(107,118,132,0.15); color: var(--closed); }
-.status.open { background: rgba(79,209,197,0.14); color: var(--teal); }
+.status.closed { background: rgba(119,119,119,0.15); color: var(--closed); }
+.status.open { background: rgba(255,255,255,0.12); color: var(--accent); }
 
 /* ---------- MAIN SECTIONS ---------- */
 
@@ -215,7 +215,7 @@ main {
 }
 
 .section-no {
-  color: var(--teal);
+  color: var(--accent);
 }
 
 .section-body p {
@@ -254,7 +254,7 @@ main {
 .skill-tag {
   font-family: var(--font-mono);
   font-size: 0.7rem;
-  color: var(--gold);
+  color: var(--ink-dim);
   letter-spacing: 0.03em;
 }
 
@@ -297,8 +297,9 @@ main {
   white-space: nowrap;
 }
 
-.status-pill.in-progress { background: rgba(209,168,87,0.14); color: var(--gold); }
-.status-pill.closed { background: rgba(107,118,132,0.15); color: var(--closed); }
+.status-pill.in-progress { background: rgba(255,255,255,0.1); color: var(--ink); }
+.status-pill.completed { background: var(--accent); color: #000000; }
+.status-pill.closed { background: rgba(119,119,119,0.15); color: var(--closed); }
 
 /* ---------- EXPERIENCE TIMELINE ---------- */
 
@@ -337,6 +338,7 @@ main {
 
 .timeline-meta .entry-no {
   font-size: 1.1rem;
+  color: var(--accent);
 }
 
 .timeline-meta .duration {
@@ -407,7 +409,7 @@ main {
   transition: color 0.15s ease;
 }
 
-.article-list a:hover { color: var(--teal); }
+.article-list a:hover { color: var(--ink-dim); }
 
 .article-list .article-date {
   font-family: var(--font-mono);
@@ -426,7 +428,7 @@ main {
   text-decoration: none;
 }
 
-.back-link:hover { color: var(--teal); }
+.back-link:hover { color: var(--accent); }
 
 /* ---------- SINGLE ARTICLE PAGE ---------- */
 
@@ -466,7 +468,7 @@ main {
 .article-meta {
   font-family: var(--font-mono);
   font-size: 0.8rem;
-  color: var(--teal);
+  color: var(--ink-dim);
   margin-bottom: 2.4rem;
 }
 
@@ -476,7 +478,7 @@ main {
 }
 
 .article-body blockquote {
-  border-left: 2px solid var(--gold);
+  border-left: 2px solid var(--accent);
   padding: 0.3rem 0 0.3rem 1.4rem;
   margin: 1.6rem 0;
   color: var(--ink);
@@ -484,13 +486,13 @@ main {
 }
 
 .article-body a {
-  color: var(--teal);
+  color: var(--ink);
   text-decoration: underline;
   text-decoration-color: var(--panel-line);
   text-underline-offset: 3px;
 }
 
-.article-body a:hover { text-decoration-color: var(--teal); }
+.article-body a:hover { text-decoration-color: var(--accent); }
 
 .article-body strong { color: var(--ink); }
 
